@@ -100,6 +100,14 @@ Out of 588 labeled records in example dataset #2 (31 `[deleted]`/`[removed]` pos
 
 For a balanced dataset, the final dataset is created by randomly choosing examples from each label of the two datasets. This random process is done by AI. The ratio posts for each label is pre-determined.
 
+Out of 200 records in the final balanced dataset:
+
+| Label       | Count | % of total |
+| ----------- | ----- | ---------- |
+| Question    | 60    | 30.0%      |
+| Analysis    | 60    | 30.0%      |
+| Opinion     | 50    | 25.0%      |
+| Information | 30    | 15.0%      |
 
 
 ## AI Usage
@@ -107,3 +115,5 @@ For a balanced dataset, the final dataset is created by randomly choosing exampl
 1. I gave Claude my definition of the labels and asked it to generate the Boundary Posts. I reviewed the posts, manually chose a label for these posts, and recorded my reasoning
 
 2. I gave Claude my taxonomy section and asked it to pre label the datasets. The AI-generated labels are in `pre_label` column of the data files. I copied the `pre_label` column into the `label` column, and updated the labels manually if needed.
+
+3. I gave Claude my collected dataset and asked it to create a balanced dataset, as I realized that one of the label is under-represented. See details above in the Data Collection section.
