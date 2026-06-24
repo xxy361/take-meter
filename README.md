@@ -124,3 +124,10 @@ Out of 200 records in the final balanced dataset:
 2. I gave Claude my taxonomy section and asked it to pre label the datasets. The AI-generated labels are in `pre_label` column of the data files. I copied the `pre_label` column into the `label` column, and updated the labels manually if needed.
 
 3. I gave Claude my collected dataset and asked it to create a balanced dataset, as I realized that one of the label is under-represented. See details above in the Data Collection section.
+
+
+## Spec Reflection
+
+**One way the specs helped**: defining the label definitions as the first step was very helpful. It was pretty much foundational for all the following steps. It was a necessary spec session for both human implementation and as context for AI tools
+
+**One way the specs diverged**: originally only one reddit thread was pulled in as data source, however, one label ended up being under-represented and more data had to be pulled in. It was written in the specs that "maybe 10 out 200 then I will pull in more data". The initial thread had just above that bar, so I decided that more data was needed to provide more samples for the "Information" label. I also thought of merging "Information" into "Analysis", but much more work would have to be done.
