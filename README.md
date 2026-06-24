@@ -3,12 +3,19 @@
  A fine-tuned text classifier that evaluates discourse quality in an online community.
 
 
-
  ## File Structure
 
 ```
 take-meter/
-├── planning.md             # Planning doc
+├── planning.md                      # Planning doc
+├── README.md                        # This file
+├── takemeter.ipynb                  # Fine-tuning + evaluation notebook
+├── scripts/
+│   └── build_balanced_dataset.py    # Combines & samples the balanced dataset
+└── data/
+    ├── megathread_jun26.csv         # Annotated thread #1
+    ├── megathread_jun24.csv         # Annotated thread #2
+    └── balanced_dataset.csv         # Final balanced set, 200 rows (text, label)
 ```
 
 
